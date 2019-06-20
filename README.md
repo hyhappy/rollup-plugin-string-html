@@ -1,6 +1,6 @@
-# rollup-plugin-string [![Build Status](https://travis-ci.org/TrySound/rollup-plugin-string.svg)](https://travis-ci.org/TrySound/rollup-plugin-string)
+> forked from [rollup-plugin-string](https://github.com/TrySound/rollup-plugin-string)
 
-Converts text files to modules:
+Converts html files to modules:
 
 ```js
 import tpl from "./tpl.html";
@@ -10,29 +10,42 @@ console.log(`Template for render: ${tpl}`);
 ## Installation
 
 ```sh
-npm i rollup-plugin-string -D
+yarn add rollup-plugin-string-html
 ```
 
 ## Usage
 
 ```js
 import { rollup } from "rollup";
-import { string } from "rollup-plugin-string";
+import html from "rollup-plugin-string-html";
 
 rollup({
   entry: "main.js",
   plugins: [
     string({
-      // Required to be specified
-      include: "**/*.html",
-
-      // Undefined by default
-      exclude: ["**/index.html"]
+      include: ["**/*.html"], // default
+      exclude: ["**/index.html"],
+      minifier: { // opts of html-minifier
+          ...
+      }
     })
   ]
 });
 ```
 
+## Minifier
+
+The options of html-minifier 
+
+default
+```
+collapseWhitespace: true,
+removeComments: true,
+removeEmptyAttributes: true,
+minifyCSS: true,
+minifyJS: true,
+```
+
 # License
 
-MIT © [Bogdan Chadkin](mailto:trysound@yandex.ru)
+MIT © [hahappy](mailto:1056605736@qq.com)

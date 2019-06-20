@@ -1,36 +1,37 @@
 {
-  "name": "rollup-plugin-string",
-  "version": "3.0.0",
-  "description": "Converts text files to modules",
+  "name": "rollup-plugin-string-html",
+  "version": "1.0.0",
+  "description": "Converts html files to modules",
   "main": "index.js",
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "rollup-pluginutils": "^2.4.1"
+    "html-minifier": "^4.0.0",
+    "rollup-pluginutils": "^2.8.1"
   },
   "devDependencies": {
-    "mocha": "^6.0.1",
-    "prettier": "^1.16.4",
-    "rollup": "^1.2.3"
+    "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
+    "rollup": "^1.15.6"
   },
   "scripts": {
     "test": "mocha test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TrySound/rollup-plugin-string.git"
+    "url": "git+https://github.com/hyhappy/rollup-plugin-string-html"
   },
   "keywords": [
     "rollup-plugin",
     "stringify",
     "string",
-    "template"
+    "html"
   ],
-  "author": "Bogdan Chadkin <trysound@yandex.ru>",
+  "author": "hyhappy <1056605736@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TrySound/rollup-plugin-string/issues"
+    "url": "https://github.com/hyhappy/rollup-plugin-string-html/issues"
   },
-  "homepage": "https://github.com/TrySound/rollup-plugin-string"
+  "homepage": "https://github.com/hyhappy/rollup-plugin-string-html"
 }
